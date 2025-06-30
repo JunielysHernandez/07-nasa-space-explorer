@@ -8,6 +8,21 @@
 /* Import NASA brand fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 
+/* NASA Official Colors for students to use */
+:root {
+  /* NASA's primary blue - the main brand color */
+  --nasa-blue: #0B3D91;
+  
+  /* NASA red - for accents and highlights */
+  --nasa-red: #FC3D21;
+  
+  /* NASA white - for text and backgrounds */
+  --nasa-white: #FFFFFF;
+  
+  /* NASA dark blue - for deeper space themes */
+  --nasa-dark-blue: #061E3C;
+}
+
 /* Base page styles */
 body {
   font-family: 'Inter', 'Source Sans Pro', Arial, sans-serif;
@@ -18,6 +33,11 @@ body {
   margin: 0;
   overflow-x: hidden;
   cursor: default; /* Use default cursor instead of rocket */
+
+  /* NASA dark blue background color */
+  background-color: var(--nasa-dark-blue);
+  color: var(--nasa-white);
+  font-family: Arial, sans-serif; /* Simple, clean font for beginners */
 }
 
 /* Remove special cursor for interactive elements */
@@ -221,6 +241,13 @@ body::after {
   z-index: 30;
   position: relative;
   transition: transform 0.3s;
+
+  /* NASA-style image gallery */
+  border: 2px solid var(--nasa-blue);
+  background-color: var(--nasa-white);
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 .gallery-item img,
@@ -271,10 +298,23 @@ button {
   cursor: pointer;
   font-weight: bold;
   transition: background 0.2s;
+
+  /* NASA-style buttons */
+  background-color: var(--nasa-blue);
+  color: var(--nasa-white);
+  border: 2px solid var(--nasa-red);
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 button:hover {
   background: linear-gradient(90deg, #6b93d6, #4f94cd);
+
+  /* NASA button hover effect */
+  background-color: var(--nasa-red);
+  border-color: var(--nasa-blue);
 }
 
 /* --- CUTE ANIMATED ROCKET --- */
